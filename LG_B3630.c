@@ -20,7 +20,6 @@ int main(){
 		break;
 	}
         counter = KidGroup[counter];
-       	//printf("##################") ;
     }
     
 
