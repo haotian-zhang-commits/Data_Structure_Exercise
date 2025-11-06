@@ -44,9 +44,24 @@ void output(LinkList  L){
 }
 
 
+/*单链表的查找结构:找到并输出第i个节点的数据域中的值*/
+
+void FindElement_L(LinkList L,int i){
+	LinkList p = L->next;				/*将p作为首元节点*/
+	int counter = 1;				/*用于控制循环次数*/
+	while(p!=NULL && counter < i){			/*若当前节点不为空，且前还没有到第i个元素*/
+		p = p->next;
+		counter++;
+	}
+	printf("第%d个元素是%d\n",i,p->data);
+
+}
+
+
 int main(){
 	LinkList L;
 	Create_L(L,5);
 	output(L);
+	FindElement_L(L,3);
 	return 0;
 }
